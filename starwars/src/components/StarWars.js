@@ -1,19 +1,20 @@
 import React from "react";
+import {Card, Content} from "./Styling.js";
 
 const Individuals = ({data}) =>{
     const person = data.map((information) =>
-    <div key={information}>
+    <Card>
         <h1>{information.name}</h1>   
         <div>
-            <p>Height: {information.height}</p>
-            <p>Mass: {information.mass}</p>
-            <p>Hair Color: {information.hair_color}</p> 
-            <p>Skin Color: {information.skin_color}</p>
-            <p>Eye Color: {information.eye_color}</p>
-            <p>Birth Year: {information.birth_year}</p> 
-            <p>Gender: {information.gender}</p>
+            <Content>Height: {information.height}</Content>
+            <Content>Mass: {information.mass}</Content>
+            <Content>Hair Color: {information.hair_color}</Content> 
+            <Content>Skin Color: {information.skin_color}</Content>
+            <Content>Eye Color: {information.eye_color}</Content>
+            <Content>Birth Year: {information.birth_year}</Content> 
+            <Content>Gender: {information.gender}</Content>
         </div>
-    </div> 
+    </Card> 
     )
     return(
         <div>
