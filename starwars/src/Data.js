@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import Individuals from "./components/StarWars.js"
 
 function Data(){
     const [data, setData] = useState([]);
@@ -17,7 +18,7 @@ function Data(){
     
     return (
         <div>
-
+            <Individuals data={data}/>
         </div>
     )
 };
